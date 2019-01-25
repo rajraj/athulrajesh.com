@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Athul Rajesh</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <section class="intro">
+    <div class="inner">
+      <div class="content">
+        <h1>
+          <span class="rwd-line">Athul</span>
+          <span class="rwd-line">Rajesh</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="84" src="sounds/hihat.wav"></audio>
+  <audio data-key="72" src="sounds/kick.wav"></audio>
+  <audio data-key="85" src="sounds/openhat.wav"></audio>
+  <audio data-key="76" src="sounds/boom.wav"></audio>
+  <audio data-key="82" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="69" src="sounds/tom.wav"></audio>
+  <audio data-key="83" src="sounds/tink.wav"></audio>
+
+  <script>
+    window.addEventListener('keydown', function () {
+      const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
+      if (audio !== null) {
+        audio.currentTime = 0;
+        audio.play()
+      }
+    })
+  </script>
+</body>
+
+</html>
